@@ -1,0 +1,23 @@
+{
+  "name": "framer",
+  "version": "0.0.1",
+  "description": "A set of HTML/CSS Frames for context of webpages",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "iframe"
+  ],
+  "author": "Matan Lehrer",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1"
+  }
+}
