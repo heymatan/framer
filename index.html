@@ -23,38 +23,95 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Browser Frames</h1>
-        <p>A set of reusable HTML/CSS frames for context of webpages</p>
-        <section class="frame-preview">
+        <section class="intro">
+            <h1>Device Frames</h1>
+            <p>A set of reusable HTML/CSS frames for context of webpages, with a fallback when no page is displayed.</p>
+            <ul>
+                Tenets:
+                <li>All device sizes are declared in px. This is to ensure that the iframe sizing is correct even when zoomed (ems would resize the container).</li>
+                <li>The outermost container for a frame is a <code>&lt;div class="device-frame DEVICE-NAME"&gt;</code> where <code>DEVICE-NAME</code> is a unique identifier.</li>
+                <li>All content should go into a nested <code>&lt;div class="viewport"&gt;</code></li>
+                <li>More to be added...</li>
+
+            </ul>
+        </section>
+        <section class="frame-preview desktop">
             <h2>Desktop Browser (Proportion Resizeable)</h2>
-            <div class="frame desktop">
-                
+            <p>This is a desktop browser frame. It should be able to be resized and reproportioned.</p>
+            <div class="device-frame desktop">
+                <div class="title-bar">
+                    <div class="mac-buttons">
+                        <span class="button red"></span>
+                        <span class="button yellow"></span>
+                        <span class="button green"></span>
+                    </div>
+                </div>
+                <div class="viewport-container">
+                    <div class="viewport">
+                        <!-- Content goes here -->
+
+                    </div>
+                </div>
             </div>
         </section>
         
         <section class="frame-preview ipad">
             <h2>Ipad (Proportion Locked)</h2>
-            <div class="frame ipad">
+            <p>This is an ipad chrome. Its screen is a fixed proportion, but it is a rotatable device.</p>
+            <p>Actual resolution: 768x1024 or 1536x2048</p>
+            <p>CSS resolution: 768x1024</p>
+            <div class="device-frame ipad">
+                <div class="front-camera"></div>
+                <div class="screen">
+                    <div class="viewport">
+                    <!-- Content goes here -->
+
+                    </div>
+                </div>
+                <div class="home-button"></div>
                 
             </div>
+            
         </section>
 
 
         <section class="frame-preview kindle">
             <h2>Kindle (Proportion Locked)</h2>
-            <div class="frame kindle">
-                
+            <p>This is kindle chrome. Its proportion is locked in either portrait or landscape (they are different due to software UI), but it is a rotatable device.</p>
+            <p>Actual resolution: 1024x600</p>
+            <p>Viewable CSS resolution: 963x573</p>
+            <div class="device-frame kindle">
+                <div class="screen">
+                    <div class="viewport">
+                    <!-- Content goes here -->
+
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="frame-preview iphone">
-            <h2>iPhone (Proportion Locked)</h2>
-            <div class="frame iphone">
-                
+            <h2>iPhone 5 (Proportion Locked)</h2>
+            <p>This is an iPhone 5 chrome. Its screen is a fixed proportion, but it is a rotatable device.</p>
+            <p>Actual resolution: 640x1136</p>
+            <p>CSS resolution: 320x568</p>
+            <div class="device-frame iphone">
+                <div class="volume-buttons"></div>
+                <div class="front-camera"></div>
+                <div class="earpiece"></div>
+                <div class="screen">
+                    <div class="viewport">
+                        <!-- Content goes here -->
+
+                    </div>
+                </div>
+                <div class="home-button"></div>
             </div>
         </section>
         
-        
+        <!-- TO DO: Add concetenation to Grunt -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
