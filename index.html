@@ -33,9 +33,20 @@
                 <li>The <code>&lt;div class="device-frame"&gt;</code> should be set to the size of the desired viewport, with sufficient padding to contain all device chrome and decoration.</li>
                 <li>The device chrome and decoration should be <code>position: absolute</code> so as not to interfere with the device-frame sizing. This way, the developer does not have to calculate the total size of the device in pixels; they simply include the appropriate HTML, give the outer frame the display size they want, and let the styles handle the presentation.</li>
                 <li>All content should go into a nested <code>&lt;div class="viewport"&gt;</code></li>
-                <li>More to be added...</li>
-
             </ul>
+            <p>OK, now that the frames are built at full size, let's add some interactivity.</p>
+            <ul class="fill-selector">
+                <li id="nofill"><a href="#">Nothing (Fallback appearance)</a></li>
+                <li id="iframe"><a href="#">iFrame</a></li>
+                <li id="slideshow"><a href="#">Slideshow</a></li>
+            </ul>
+            <div id="iframe-config">
+                <p>Enter the url you would like to display in the frames:</p>
+                <form id="iframe-address">
+                    <input type="url" name="url" placeholder="http://www.somewhere.com" />
+                    <input type="submit" value="Go!" />
+                </form>
+            </div>
         </section>
         <section class="frame-preview desktop">
             <h2>Desktop Browser (Proportion Resizeable)</h2>
@@ -80,26 +91,6 @@
         </section>
 
 
-        <section class="frame-preview kindle">
-            <h2>Kindle (Proportion Locked)</h2>
-            <p>This is kindle chrome. This demo is using an image for the frame, as opposed to one built completely in CSS. This would allow for faster iteration if there were a new device but not enough time to build it in code. It still offers significant file size savings over the current model, because the chrome is not being included in every image, and we can take advantage of .jpg compression for the screenshots since transparency is not necessary without the drop shadow.</p>
-            <ul>
-                <li>Resolution with UI: 963x573</li>
-                <li>Next steps: Add <code>landscape</code> class to handle other orientation</li>
-                <li>Next steps: Rebuild in HTML/CSS</li>
-                <li></li>
-            </ul>
-            
-            <div class="device-frame kindle">
-                <div class="screen">
-                    <div class="viewport">
-                    <!-- Content goes here -->
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="frame-preview iphone">
             <h2>iPhone 5 (Proportion Locked)</h2>
             <p>This is an iPhone 5 chrome. Its screen is a fixed proportion.</p>
@@ -125,6 +116,28 @@
                 <div class="home-button"></div>
             </div>
         </section>
+
+        <section class="frame-preview kindle">
+            <h2>Kindle (Proportion Locked)</h2>
+            <p>This is kindle chrome. This demo is using an image for the frame, as opposed to one built completely in CSS. This would allow for faster iteration if there were a new device but not enough time to build it in code. It still offers significant file size savings over the current model, because the chrome is not being included in every image, and we can take advantage of .jpg compression for the screenshots since transparency is not necessary without the drop shadow.</p>
+            <ul>
+                <li>Resolution with UI: 963x573</li>
+                <li>Next steps: Add <code>landscape</code> class to handle other orientation</li>
+                <li>Next steps: Rebuild in HTML/CSS</li>
+                <li></li>
+            </ul>
+            
+            <div class="device-frame kindle">
+                <div class="screen">
+                    <div class="viewport">
+                    <!-- Content goes here -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         
         <!-- TO DO: Add concetenation to Grunt -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

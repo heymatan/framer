@@ -1,0 +1,62 @@
+.device-frame.ipad{
+	width:768px;
+	height:1024px;
+	padding:117px 37px;
+	background-color: $idevice-body;
+	border-color:$idevice-body-lighter;
+	border-width:6px;
+	border-style:solid;
+	border-radius: 60px;
+	.front-camera{
+		width:14px;
+		height: 14px;
+		border-radius:100%;
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		margin-left: -7px; 
+		@include bg-light-gradient();
+		&:after{
+			content: "";
+			display: block;
+			width: 6px;
+			height: 6px;
+			border-radius:100%;
+			background-color: #8c8091;
+			position:absolute;
+			top: 4px;
+			left: 4px;
+		}
+	}
+	.screen{
+		background-color:$screen-black;
+		width: 100%;
+		height: 100%;
+		border-radius:4px;
+		box-shadow:0 0 0 3px $screen-black;
+		overflow: hidden;
+	}
+	.home-button{
+		width: 58px;
+		height: 58px;
+		border-radius:100%;
+		@include bg-light-gradient();
+		position:absolute;
+		left: 50%;
+		margin-left: -29px;
+		bottom:29px;
+		&:after{
+			content:"";
+			display: block;
+			width: 18px;
+			height: 18px;
+			border-style:solid;
+			border-width: 2px;
+			border-color: #eff1e6;
+			border-radius:4px;
+			position:absolute;
+			top: 18px;
+			left: 18px;
+		}
+	}
+}

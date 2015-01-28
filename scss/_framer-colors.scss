@@ -1,0 +1,12 @@
+//Color Variables for devices
+$idevice-body: #ebebe4;
+$idevice-body-lighter: #f1f2eb;
+$screen-black: #161616;
+$color-red: #FF4136;
+$color-yellow: #FFDC00;
+$color-green: #2ECC40;
+
+
+@mixin bg-light-gradient(){
+	@include linear-gradient(#d0d0c5, #eeeeea);
+}
