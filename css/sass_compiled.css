@@ -306,9 +306,41 @@ section.frame-preview.kindle {
   background-color: #2ECC40;
 }
 
+.fill-selector {
+  margin: 0;
+  padding: 0;
+}
+.fill-selector li {
+  list-style-type: none;
+  display: inline-block;
+}
+.fill-selector li a {
+  padding: 0.5em 1em;
+  background-color: #7FDBFF;
+  text-decoration: none;
+}
+.fill-selector li a:hover {
+  background-color: #4ccdff;
+}
+.fill-selector li.active a {
+  background-color: #0074D9;
+  color: white;
+}
+
+#iframe-config {
+  display: none;
+}
+
 .device-frame {
   margin: 0 auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
 }
 
 /*# sourceMappingURL=sass_compiled.css.map */
