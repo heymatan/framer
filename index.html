@@ -30,6 +30,8 @@
                 Tenets:
                 <li>All device sizes are declared in px. This is to ensure that the iframe sizing is correct even when zoomed (ems would resize the container).</li>
                 <li>The outermost container for a frame is a <code>&lt;div class="device-frame DEVICE-NAME"&gt;</code> where <code>DEVICE-NAME</code> is a unique identifier.</li>
+                <li>The <code>&lt;div class="device-frame"&gt;</code> should be set to the size of the desired viewport, with sufficient padding to contain all device chrome and decoration.</li>
+                <li>The device chrome and decoration should be <code>position: absolute</code> so as not to interfere with the device-frame sizing. This way, the developer does not have to calculate the total size of the device in pixels; they simply include the appropriate HTML, give the outer frame the display size they want, and let the styles handle the presentation.</li>
                 <li>All content should go into a nested <code>&lt;div class="viewport"&gt;</code></li>
                 <li>More to be added...</li>
 
@@ -37,7 +39,7 @@
         </section>
         <section class="frame-preview desktop">
             <h2>Desktop Browser (Proportion Resizeable)</h2>
-            <p>This is a desktop browser frame. It should be able to be resized and reproportioned.</p>
+            <p>This is a desktop browser frame. It is able to be resized and reproportioned. This demo is built with pure HTML/CSS, which is the preferred way to build frames, as it is the lightest in filesize.</p>
             <div class="device-frame desktop">
                 <div class="title-bar">
                     <div class="mac-buttons">
@@ -57,9 +59,12 @@
         
         <section class="frame-preview ipad">
             <h2>Ipad (Proportion Locked)</h2>
-            <p>This is an ipad chrome. Its screen is a fixed proportion, but it is a rotatable device.</p>
-            <p>Actual resolution: 768x1024 or 1536x2048</p>
-            <p>CSS resolution: 768x1024</p>
+            <p>This is an ipad chrome. Its screen is a fixed proportion. This demo is also built with pure HTML/CSS.</p>
+            <ul>
+                <li>Actual resolution: 768x1024 or 1536x2048</li>
+                <li>CSS resolution: 768x1024</li>
+                <li>Next steps: add <code>landscape</code> class styles for other orientation</li>
+            </ul>
             <div class="device-frame ipad">
                 <div class="front-camera"></div>
                 <div class="screen">
@@ -77,9 +82,14 @@
 
         <section class="frame-preview kindle">
             <h2>Kindle (Proportion Locked)</h2>
-            <p>This is kindle chrome. Its proportion is locked in either portrait or landscape (they are different due to software UI), but it is a rotatable device.</p>
-            <p>Actual resolution: 1024x600</p>
-            <p>Viewable CSS resolution: 963x573</p>
+            <p>This is kindle chrome. This demo is using an image for the frame, as opposed to one built completely in CSS. This would allow for faster iteration if there were a new device but not enough time to build it in code. It still offers significant file size savings over the current model, because the chrome is not being included in every image, and we can take advantage of .jpg compression for the screenshots since transparency is not necessary without the drop shadow.</p>
+            <ul>
+                <li>Resolution with UI: 963x573</li>
+                <li>Next steps: Add <code>landscape</code> class to handle other orientation</li>
+                <li>Next steps: Rebuild in HTML/CSS</li>
+                <li></li>
+            </ul>
+            
             <div class="device-frame kindle">
                 <div class="screen">
                     <div class="viewport">
@@ -92,12 +102,19 @@
 
         <section class="frame-preview iphone">
             <h2>iPhone 5 (Proportion Locked)</h2>
-            <p>This is an iPhone 5 chrome. Its screen is a fixed proportion, but it is a rotatable device.</p>
-            <p>Actual resolution: 640x1136</p>
-            <p>CSS resolution: 320x568</p>
+            <p>This is an iPhone 5 chrome. Its screen is a fixed proportion.</p>
+            <ul>
+                <li>Actual resolution: 640x1136</li>
+                <li>CSS resolution: 320x568</li>
+                 <li>Next steps: add <code>landscape</code> class styles for other orientation</li>
+            </ul>
+
+            <p></p>
+            <p></p>
             <div class="device-frame iphone">
                 <div class="volume-buttons"></div>
                 <div class="front-camera"></div>
+                <div class="proximity-sensor"></div>
                 <div class="earpiece"></div>
                 <div class="screen">
                     <div class="viewport">
