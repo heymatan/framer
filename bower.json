@@ -1,0 +1,22 @@
+{
+  "name": "framer",
+  "version": "0.0.1",
+  "authors": [
+    "heymatan <heymatan@users.noreply.github.com>"
+  ],
+  "description": "A series of HTML/CSS frames for presenting context",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.1.1",
+    "webcolors": "~1.1.0"
+  }
+}
