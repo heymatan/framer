@@ -76,6 +76,8 @@ section{
 .device-frame{
 	margin:0 auto;
 	box-shadow:0 0 20px 0 rgba(0,0,0,0.5);
+	@include transform(scale(1));
+	@include transform-origin(top left);
 }	
 
 iframe{
