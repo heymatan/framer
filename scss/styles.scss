@@ -78,6 +78,10 @@ section{
 	box-shadow:0 0 20px 0 rgba(0,0,0,0.5);
 	@include transform(scale(1));
 	@include transform-origin(top left);
+}
+
+.device-frame .viewport{
+	overflow:hidden;
 }	
 
 iframe{
@@ -90,5 +94,9 @@ iframe{
 .flexslider{
 	width:100%;
 	height:100%;
+	margin:0;
+	padding:0;
 	border: none;
+
 }
+
