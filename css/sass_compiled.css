@@ -334,6 +334,7 @@ section.frame-preview.kindle {
 .device-frame {
   margin: 0 auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(0.75);
 }
 
 iframe {
@@ -341,6 +342,12 @@ iframe {
   height: 100%;
   border: none;
   background: white;
+}
+
+.flexslider {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /*# sourceMappingURL=sass_compiled.css.map */
